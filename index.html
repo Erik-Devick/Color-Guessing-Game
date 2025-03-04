@@ -5,9 +5,12 @@
     <meta charset="utf-8" />
     <title>Color Match</title>
     <link href="style.css" rel="stylesheet" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body onload="getRandomColor()">
+    <div class="intro">
+        <h1>Adjust color sliders to match the color of the box on the left.</h1>
+    </div>
     <div class="gameArea">
         <div class="leftGameArea">
             <div class="randColorDisplay"></div>
@@ -15,14 +18,25 @@
         <div class="rightGameArea">
             <div class="yourColor"></div>
             <div class="sliderBox">
-                <input type="range" min="0" max="255" value="100" class="colorSlider" id="redSlider">
-                <input type="range" min="0" max="255" value="100" class="colorSlider" id="greenSlider">
-                <input type="range" min="0" max="255" value="100" class="colorSlider" id="blueSlider">
+                <div class="sliderContainer">
+                    <label class="sliderLabel">Red:</label>
+                    <input type="range" class="colorSlider" id="redSlider" min="0" max="255" value="100">
+                </div>
+                <div class="sliderContainer">
+                    <label class="sliderLabel">Green:</label>
+                    <input type="range" class="colorSlider" id="greenSlider" min="0" max="255" value="100">
+                </div>
+                <div class="sliderContainer">
+                    <label class="sliderLabel">Blue:</label>
+                    <input type="range" class="colorSlider" id="blueSlider" min="0" max="255" value="100">
+                </div>
+
+                
             </div>
         </div>
     </div>
     <div class="submitSpan">
-
+        <button class="submitGuess" onclick="checkGuess()">Submit</button>
     </div>
 </body>
 </html>
