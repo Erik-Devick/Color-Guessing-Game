@@ -1,3 +1,4 @@
 # Color-Guessing-Game
----
-LINK
+
+
+Use the following link to play the game: LINK
