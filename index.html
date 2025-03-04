@@ -2,16 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Color Match</title>
     <link href="style.css" rel="stylesheet" />
     <script src="script.js"></script>
-    
 </head>
-<body>
+<body onload="getRandomColor()">
     <div class="gameArea">
         <div class="leftGameArea">
             <div class="randColorDisplay"></div>
+        </div>
+        <div class="rightGameArea">
+            <div class="yourColor"></div>
+            <div class="sliderBox">
+                <input type="range" min="0" max="255" value="100" class="colorSlider" id="redSlider">
+                <input type="range" min="0" max="255" value="100" class="colorSlider" id="greenSlider">
+                <input type="range" min="0" max="255" value="100" class="colorSlider" id="blueSlider">
+            </div>
         </div>
     </div>
     <div class="submitSpan">

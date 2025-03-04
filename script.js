@@ -3,5 +3,5 @@ function getRandomColor() {
     g = Math.floor(Math.random() * 256);
     b = Math.floor(Math.random() * 256);
 
-    document.getElementsByClassName("randColorDisplay").backgraundColor = "rgb(r, g, b)";
+    document.querySelector(".randColorDisplay").style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }

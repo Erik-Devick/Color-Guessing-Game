@@ -7,6 +7,7 @@ body {
 }
 
 .gameArea {
+    display: flex;
     margin: 0;
     padding: 0;
     height: 90vh;
@@ -32,12 +33,58 @@ body {
     align-items: center;
 }
 
+.rightGameArea {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.yourColor {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    height: 40%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(50, 50, 50);
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin-bottom: 5%;
+}
+
+.sliderBox {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    height: 40%;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(50, 50, 50);
+    box-sizing: border-box;
+    margin-top: 5%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
 .randColorDisplay {
     margin: 0;
     padding: 0;
     width: 90%;
     height: 90%;
     background-color: rgb(255, 255, 255);
-    border-radius: 10%;
+    border-radius: 25px;
     border: 1px solid rgb(50, 50, 50);
+}
+
+.colorSlider {
+    margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
 }
