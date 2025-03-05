@@ -33,8 +33,34 @@ function checkGuess() {
 
     var distance = Math.sqrt((randomRed-Rguess)**2+(randomGreen-Gguess)**2+(randomBlue-Bguess)**2);
     var maxDistance = Math.sqrt(195075);
-    var similarity = (1-(distance/maxDistance))*100
+    var similarity = (1-(distance/maxDistance))*100;
 
-    alert(`${similarity.toFixed(2)}% correct`)
+    return [similarity, randomRed, randomGreen, randomBlue, Rguess, Gguess, Bguess];
+}
+
+function playAgain() {
     location.reload();
 }
+
+const openPopup = document.getElementById('openPopup');
+const closePopup = document.getElementById('closePopup');
+const popup = document.getElementById('popup');
+const accuracy = document.getElementById('accuracy');
+const redComparison = document.getElementById('redComparison');
+const greenComparison = document.getElementById('greenComparison');
+const blueComparison = document.getElementById('blueComparison');
+
+openPopup.addEventListener('click', () => {
+    popup.style.display = 'flex';
+    accuracy.textContent = `Accuracy: ${checkGuess()[0].toFixed(2)}%`;
+    redComparison.textContent = `Red acutal: ${checkGuess()[1]} vs. Your guess: ${checkGuess()[4]}`;
+    greenComparison.textContent = `Green actual: ${checkGuess()[2]} vs. Your guess: ${checkGuess()[5]}`;
+    blueComparison.textContent = `Blue actual: ${checkGuess()[3]} vs. Your guess: ${checkGuess()[6]}`;
+});
+
+closePopup.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
+
+
+

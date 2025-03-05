@@ -30,13 +30,22 @@
                     <label class="sliderLabel">Blue:</label>
                     <input type="range" class="colorSlider" id="blueSlider" min="0" max="255" value="100">
                 </div>
-
-                
             </div>
         </div>
     </div>
     <div class="submitSpan">
-        <button class="submitGuess" onclick="checkGuess()">Submit</button>
+        <button id="openPopup" class="submitGuess" onclick="checkGuess()">Submit</button>
     </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2 id="accuracy"></h2>
+            <p id="redComparison"></p>
+            <p id="greenComparison"></p>
+            <p id="blueComparison"></p>
+            <button onclick="playAgain()" id="closePopup" style="margin-top: 10px; padding:
+                                           5px 10px; background-color: #dc3545; color: #fff; 
+                                           border: none; border-radius: 3px;">Play again?</button>
+        </div>
 </body>
 </html>
