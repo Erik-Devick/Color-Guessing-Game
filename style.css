@@ -166,3 +166,21 @@ h1 {
     border-radius: 5px;
     text-align: center;
 }
+
+.closePopupButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 3px;
+    border: 2px solid red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.closePopupButton:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+}
