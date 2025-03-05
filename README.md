@@ -1,5 +1,6 @@
 # Color Matching Game
 #### Use the following link to play the game: https://erik-devick.github.io/Color-Guessing-Game/
+#### My highscore: 98.17%
 <br>
 
 How is score calculated?
